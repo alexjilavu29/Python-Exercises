@@ -12,12 +12,14 @@ def removeElement(nums, val):
             nums[i] = nums[j]
             nums[j] = aux
             l -= 1
-        else:
-            k += 1
         i += 1
+    i = 0
+    while i<len(nums) and nums[i]!=val :
+        k+=1
+        i+=1
     return k
 
 # Declare variables for removeElement function
-nums = [0,1,2,2,3,0,4,2]
-val = 2
+nums = []
+val = 0
 print(removeElement(nums,val))
