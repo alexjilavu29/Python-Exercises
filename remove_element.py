@@ -2,10 +2,10 @@ def removeElement(nums, val):
     k = 0
     l = len(nums)
     i = 0
-    while i < l - 1 and l > 0:
+    while i < l - 1:
         if nums[i] == val:
             j = l - 1
-            while nums[j] == val:
+            while nums[j] == val and l>0:
                 j -= 1
                 l -= 1
             aux = nums[i]
