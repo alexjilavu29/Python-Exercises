@@ -1,10 +1,8 @@
 def obfuscateCardMetadata(card_bin, card_intervals):
-    # Read every line of card_intervals and store it in a list
     intervals = []
     for line in card_intervals:
         intervals.append(line.split(","))
 
-    # Iterate through the intervals
     checkpoints=[]
     for interval in intervals:
         checkpoint = []
@@ -19,7 +17,6 @@ def obfuscateCardMetadata(card_bin, card_intervals):
         checkpoints.append(checkpoint)
     print(checkpoints)
 
-    # Sort the checkpoints after checkpoints[0]
     checkpoints.sort(key=lambda x: x[0])
     print(checkpoints)
 
@@ -64,6 +61,6 @@ def obfuscateCardMetadata(card_bin, card_intervals):
 
 
 
-card_intervals = ["4000000000,5999999999,MASTERCARD","1000000000,2999999999,VISA","3000000000,3499999999,VISA","4500000000,4999999999,AMEX"]
+card_intervals = ["1000000000,2999999999,VISA","4000000000,5999999999,MASTERCARD","1500000000,2599999999,ING"]
 card_bin=777777
 obfuscateCardMetadata(card_bin, card_intervals)
