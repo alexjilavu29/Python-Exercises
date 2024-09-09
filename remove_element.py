@@ -20,6 +20,6 @@ def removeElement(nums, val):
     return k
 
 # Declare variables for removeElement function
-nums = [3,3]
+nums = [2,3,3]
 val = 3
 print(removeElement(nums,val))
