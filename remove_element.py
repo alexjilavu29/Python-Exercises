@@ -8,9 +8,10 @@ def removeElement(nums, val):
             while nums[j] == val and l>0:
                 j -= 1
                 l -= 1
-            aux = nums[i]
-            nums[i] = nums[j]
-            nums[j] = aux
+            if j>i:
+                aux = nums[i]
+                nums[i] = nums[j]
+                nums[j] = aux
             l -= 1
         i += 1
     i = 0
