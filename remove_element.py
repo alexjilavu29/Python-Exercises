@@ -2,6 +2,8 @@ def removeElement(nums, val):
     k = 0
     l = len(nums)
     i = 0
+
+    # Parce through numbers
     while i < l - 1:
         if nums[i] == val:
             j = l - 1
