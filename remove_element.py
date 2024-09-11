@@ -17,6 +17,8 @@ def removeElement(nums, val):
             l -= 1
         i += 1
     i = 0
+
+    # Count the number of elements different from val
     while i < len(nums) and nums[i] != val:
         k += 1
         i += 1
