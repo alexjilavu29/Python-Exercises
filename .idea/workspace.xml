@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="957abb66-122a-4495-b030-84e34d1bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/remove_element.py" beforeDir="false" afterPath="$PROJECT_DIR$/remove_element.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_hash_set_google.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/duplicate_detector_set.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sum_of_digits_string.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +36,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.duplicate_detector_set.executor": "Run",
     "Python.main.executor": "Run",
     "Python.merge_two_arrays.executor": "Debug",
     "Python.remove_element.executor": "Run",
     "Python.stripe_interview.executor": "Run",
+    "Python.sum_of_digits_string.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master"
@@ -83,5 +88,16 @@
       <updated>1724416075779</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sum_of_digits_string.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
