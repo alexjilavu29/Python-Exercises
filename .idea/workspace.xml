@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="957abb66-122a-4495-b030-84e34d1bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/custom_hash_set_google.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/duplicate_detector_set.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sum_of_digits_string.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/intersection_of_arrays_google.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +33,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.detect_non-duplicate_google.executor": "Run",
     "Python.duplicate_detector_set.executor": "Run",
     "Python.main.executor": "Run",
     "Python.merge_two_arrays.executor": "Debug",
