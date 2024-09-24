@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="957abb66-122a-4495-b030-84e34d1bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sudoku_board_checker_google.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hash_table_anagrams.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_table_anagrams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sudoku_board_checker_google.py" beforeDir="false" afterPath="$PROJECT_DIR$/sudoku_board_checker_google.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,7 @@
     "Python.merge_two_arrays.executor": "Debug",
     "Python.remove_element.executor": "Run",
     "Python.stripe_interview.executor": "Run",
+    "Python.sudoku_board_checker_google.executor": "Run",
     "Python.sum_of_digits_string.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
