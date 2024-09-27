@@ -35,6 +35,7 @@
   "keyToString": {
     "Python.detect_non-duplicate_google.executor": "Run",
     "Python.duplicate_detector_set.executor": "Run",
+    "Python.duplicate_subtrees_binary_trees_google.executor": "Run",
     "Python.hash_table_anagrams.executor": "Run",
     "Python.intersection_of_arrays_google.executor": "Run",
     "Python.main.executor": "Run",

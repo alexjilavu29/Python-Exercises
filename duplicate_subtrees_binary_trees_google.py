@@ -1,7 +1,18 @@
+import time
+
 
 def findDuplicateSubtrees(root):
+    def hashingFunction(subtree):
+
+        hashCode = ""
+
+        for i in range(len(subtree)):
+            hashCode += str(subtree[i].val)
+
+        return hashCode
 
     subtreeMap = {}
+    subtreeList = []
 
     def subtreeMaker(treeNode):
 
@@ -14,7 +25,7 @@ def findDuplicateSubtrees(root):
         subtreeRight = subtreeMaker(treeNode.right)
 
         if treeNode.val != "#":
-            subtree.append(treeNode.val)
+            subtree.append(treeNode)
 
         if subtreeLeft != "#":
             subtree.extend(subtreeLeft)
@@ -22,7 +33,13 @@ def findDuplicateSubtrees(root):
         if subtreeRight != "#":
             subtree.extend(subtreeRight)
 
-        subtreeMap[str(subtree)] += 1
+        subtreeCode = hashingFunction(subtree)
+
+        if subtreeCode not in subtreeMap:
+            subtreeMap[subtreeCode] = 1
+            subtreeList.append(subtree)
+        else:
+            subtreeMap[subtreeCode] += 1
 
         print(subtreeMap)
 
@@ -32,8 +49,24 @@ def findDuplicateSubtrees(root):
 
     duplicates = []
 
-    for i in subtreeMap:
-        if subtreeMap[i] > 1:
-            duplicates.append(i)
+    print
+    subtreeList
+
+    for i in subtreeList:
+        if subtreeMap[hashingFunction(i)] > 1:
+            duplicates.append(i[0])
+            print(duplicates)
 
     return duplicates
+
+
+# Declare variables for findDuplicateSubtrees function
+root = [1,2,3,4,None,2,4,None,None,4]
+
+# Time the function
+
+start_time = time.time()
+
+print(findDuplicateSubtrees(root))
+
+print("--- %s seconds ---" % (time.time() - start_time))
