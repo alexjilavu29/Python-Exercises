@@ -1,6 +1,6 @@
-#print(len(" "))
+#print(len(" ")) # A string made of spaces is counted as a string of characters
 
-#for i in range(0,0):
+#for i in range(0,0):   # This loop will not run
 #    print("Hello")
 
 
