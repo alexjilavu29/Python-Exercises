@@ -2,12 +2,17 @@ import time
 
 
 def findDuplicateSubtrees(root):
+
     def hashingFunction(subtree):
 
         hashCode = ""
 
         for i in range(len(subtree)):
             hashCode += str(subtree[i].val)
+            if subtree[i].left:
+                hashCode += "-"
+            if subtree[i].right:
+                hashCode += "+"
 
         return hashCode
 
@@ -41,7 +46,7 @@ def findDuplicateSubtrees(root):
         else:
             subtreeMap[subtreeCode] += 1
 
-        print(subtreeMap)
+        # print(subtreeMap)
 
         return subtree
 
@@ -49,13 +54,19 @@ def findDuplicateSubtrees(root):
 
     duplicates = []
 
-    print
-    subtreeList
+    # print("Subtree list:")
+    # print(subtreeList)
+    # print("")
+    # print("Subtree map:")
+    # print(subtreeMap)
 
     for i in subtreeList:
         if subtreeMap[hashingFunction(i)] > 1:
             duplicates.append(i[0])
-            print(duplicates)
+
+    # print("")
+    # print("Final duplicates list:")
+    # print(duplicates)
 
     return duplicates
 
