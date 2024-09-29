@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="957abb66-122a-4495-b030-84e34d1bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/longest_non-repeating_substring_google.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4sum_google.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
     "Python.duplicate_subtrees_binary_trees_google.executor": "Run",
     "Python.hash_table_anagrams.executor": "Run",
     "Python.intersection_of_arrays_google.executor": "Run",
+    "Python.longest_non-repeating_substring_google.executor": "Run",
     "Python.main.executor": "Run",
     "Python.merge_two_arrays.executor": "Debug",
     "Python.remove_element.executor": "Run",
