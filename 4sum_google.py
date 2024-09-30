@@ -31,3 +31,24 @@ def fourSumCount(nums1, nums2, nums3, nums4):
             count += ComboMap12[i] * ComboMap34[opposite]
 
     return count
+
+
+# 4sum with only one list
+def fourSum(nums, target):
+
+    result = []
+
+    if len(nums) < 4:
+        return result
+
+    for i in range(len(nums) - 3):
+        for j in range(i + 1, len(nums) - 2):
+            for k in range(j + 1, len(nums) - 1):
+                for l in range(k + 1, len(nums)):
+                    if nums[i] + nums[j] + nums[k] + nums[l] == target:
+                        quadruplet = list((nums[i], nums[j], nums[k], nums[l]))
+                        quadruplet.sort()
+                        if quadruplet not in result:
+                            result.append(quadruplet)
+
+    return result
