@@ -52,3 +52,40 @@ def fourSum(nums, target):
                             result.append(quadruplet)
 
     return result
+
+
+
+def fourSum(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[List[int]]
+    """
+    result = []
+
+    if len(nums) < 4:
+        return result
+
+    pairMap = {}
+
+    for i in range(0, len(nums) - 1):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] not in pairMap:
+                pairMap[nums[i] + nums[j]] = []
+            pairMap[nums[i] + nums[j]].append(list((nums[i], nums[j])))
+
+    print(pairMap)
+
+    for i in pairMap:
+        if target - i in pairMap:
+            for j in pairMap[i]:
+                for k in pairMap[target - i]:
+                    if j != k:
+                        quadruplet = []
+                        quadruplet.extend(j)
+                        quadruplet.extend(k)
+                        quadruplet.sort()
+                        if quadruplet not in result:
+                            result.append(quadruplet)
+
+    return result
