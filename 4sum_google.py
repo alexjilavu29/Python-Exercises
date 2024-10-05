@@ -89,3 +89,91 @@ def fourSum(nums, target):
                             result.append(quadruplet)
 
     return result
+
+
+
+def fourSum(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[List[int]]
+    """
+    result = []
+
+    if len(nums) < 4:
+        return result
+
+    pairMap = {}
+
+    for i in range(0, len(nums) - 1):
+        for j in range(i + 1, len(nums)):
+
+            if nums[i] + nums[j] not in pairMap:
+                pairMap[nums[i] + nums[j]] = []
+
+            ij_list = []
+
+            if nums[i] == 0:
+                ij_list.append(nums[i] + (i * 10 ** len(nums[i])))
+            else:
+                ij_list.append(nums[i] + (i * 10 ** len(nums[i])) * (nums[i] / abs(nums[i])))
+
+            if nums[j] == 0:
+                ij_list.append(j * 10 ** len(nums[j]))
+            else:
+                ij_list.append(nums[j] + (j * 10 ** len(nums[j])) * (nums[j] / abs(nums[j])))
+
+            pairMap[nums[i] + nums[j]].append(ij_list)
+
+    print(pairMap)
+
+    for i in pairMap:
+        if target - i in pairMap:
+            for j in pairMap[i]:
+                for k in pairMap[target - i]:
+                    if j != k:
+
+                        q = []
+                        q.extend(j)
+                        q.extend(k)
+
+                        qSet = set(q)
+
+                        if len(q) == len(qSet):
+
+                            j_update = []
+                            j_update.extend(j)
+
+                            if j_update[0] >= 0:
+                                j_update[0] = j_update[0] % 10
+                            else:
+                                j_update[0] = (-1) * (abs(j_update[0]) % 10)
+
+                            if j_update[1] >= 0:
+                                j_update[1] = j_update[1] % 10
+                            else:
+                                j_update[1] = (-1) * (abs(j_update[1]) % 10)
+
+                            k_update = []
+                            k_update.extend(k)
+
+                            if k_update[0] >= 0:
+                                k_update[0] = k_update[0] % 10
+                            else:
+                                k_update[0] = (-1) * (abs(k_update[0]) % 10)
+
+                            if k_update[1] >= 0:
+                                k_update[1] = k_update[1] % 10
+                            else:
+                                k_update[1] = (-1) * (abs(k_update[1]) % 10)
+
+                            quadruplet = []
+                            quadruplet.extend(j_update)
+                            quadruplet.extend(k_update)
+
+                            print(quadruplet)
+                            quadruplet.sort()
+                            if quadruplet not in result:
+                                result.append(quadruplet)
+
+    return result
