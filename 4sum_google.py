@@ -178,6 +178,8 @@ def fourSum(nums, target):
 
     return result
 
+
+
 def fourSum(nums, target):
     """
     :type nums: List[int]
@@ -218,48 +220,26 @@ def fourSum(nums, target):
             for j in pairMap[i]:
                 for k in pairMap[target - i]:
                     if j != k:
-                        # TODO -----------------------------------
+
                         q = []
-                        q.extend(j)
-                        q.extend(k)
+                        q.append(j[0][1])
+                        q.append(j[1][1])
+                        q.append(k[0][1])
+                        q.append(k[1][1])
 
                         qSet = set(q)
 
                         if len(q) == len(qSet):
 
-                            j_update = []
-                            j_update.extend(j)
+                            quad = []
+                            quad.append(j[0][0])
+                            quad.append(j[1][0])
+                            quad.append(k[0][0])
+                            quad.append(k[1][0])
 
-                            if j_update[0] >= 0:
-                                j_update[0] = j_update[0] % 10
-                            else:
-                                j_update[0] = (-1) * (abs(j_update[0]) % 10)
-
-                            if j_update[1] >= 0:
-                                j_update[1] = j_update[1] % 10
-                            else:
-                                j_update[1] = (-1) * (abs(j_update[1]) % 10)
-
-                            k_update = []
-                            k_update.extend(k)
-
-                            if k_update[0] >= 0:
-                                k_update[0] = k_update[0] % 10
-                            else:
-                                k_update[0] = (-1) * (abs(k_update[0]) % 10)
-
-                            if k_update[1] >= 0:
-                                k_update[1] = k_update[1] % 10
-                            else:
-                                k_update[1] = (-1) * (abs(k_update[1]) % 10)
-
-                            quadruplet = []
-                            quadruplet.extend(j_update)
-                            quadruplet.extend(k_update)
-
-                            print(quadruplet)
-                            quadruplet.sort()
-                            if quadruplet not in result:
-                                result.append(quadruplet)
+                            print(quad)
+                            quad.sort()
+                            if quad not in result:
+                                result.append(quad)
 
     return result
