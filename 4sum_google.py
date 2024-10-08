@@ -243,3 +243,69 @@ def fourSum(nums, target):
                                 result.append(quad)
 
     return result
+
+
+
+def fourSum(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[List[int]]
+    """
+    nums.sort()
+    result = []
+
+    if len(nums) < 4:
+        return result
+
+    pairMap = {}
+
+    for i in range(0, len(nums) - 1):
+
+        for j in range(i + 1, len(nums)):
+
+            if nums[i] + nums[j] not in pairMap:
+                pairMap[nums[i] + nums[j]] = []
+
+            ij_list = []
+
+            num_pos = []
+            num_pos.append(nums[i])
+            num_pos.append(i)
+            num_pos.append(nums[j])
+            num_pos.append(j)
+            ij_list.extend(num_pos)
+
+            pairMap[nums[i] + nums[j]].append(ij_list)
+
+    print(pairMap)
+
+    for i in pairMap:
+        if target - i in pairMap:
+            for j in pairMap[i]:
+                for k in pairMap[target - i]:
+                    if j != k:
+
+                        q = []
+                        q.append(j[1])
+                        q.append(j[3])
+                        q.append(k[1])
+                        q.append(k[3])
+
+                        qSet = set(q)
+
+                        if len(q) == len(qSet):
+
+                            quad = []
+                            quad.append(j[0])
+                            quad.append(j[2])
+                            quad.append(k[0])
+                            quad.append(k[2])
+
+                            print(quad)
+                            quad.sort()
+                            if quad not in result:
+                                result.append(quad)
+
+    return result
+
