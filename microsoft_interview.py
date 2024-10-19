@@ -43,8 +43,9 @@ def solution(A):
         # We reset the current domino.
         cur = []
 
-    # We add the lest found sequence to the list.
+    # We add the last found sequence to the list.
     seqs.append(sequence)
+    # print(seqs)
 
     # Afterwords, we tackle each combination of dominos beginning with each sequence in the list.
 
