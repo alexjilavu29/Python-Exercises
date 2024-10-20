@@ -1,9 +1,7 @@
 # you can write to stdout for debugging purposes, e.g.
 # print("this is a debug message")
 
-def solution(A):
-    # Implement your solution here
-    pass
+def domino(A):
 
     # This method stores each sequence of consequent dominos as a list of its own.
 
@@ -45,7 +43,7 @@ def solution(A):
 
     # We add the last found sequence to the list.
     seqs.append(sequence)
-    # print(seqs)
+    print(seqs)
 
     # Afterwords, we tackle each combination of dominos beginning with each sequence in the list.
 
@@ -78,7 +76,7 @@ def solution(A):
                 pair = aux[cur_pos][-1]
                 cur_pos += 1
 
-            # print(aux)
+            print(aux)
 
         # If the buffer dominos + the dominos eliminated to the right of the current one is lower than the previous minimum number, we found a better combination.
         if buffer + out < min_out:
@@ -91,6 +89,6 @@ def solution(A):
     return min_out
 
 
+ex = [4,5,2,1,1,3,3,4,5,6]
 
-
-
+print(domino(ex))
